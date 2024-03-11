@@ -1,0 +1,47 @@
+.turn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    justify-content: space-between;
+  }
+
+  .turn_titles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    text-align: center;
+  }
+
+  .turn_date,
+  .turn_time,
+  .turn_status {
+    margin: 4px;
+    flex: 1 1 auto;
+  }
+  
+  .turn_date {
+    font-weight: bold;
+  }
+  
+  .turn_status {
+    color: #777;
+  }
+
+  .turno_details {
+    background-color: #0073b7;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    margin-left: 4px;
+  }
+  
+  .turno_details:hover {
+    background-color: #005b99;
+  }
