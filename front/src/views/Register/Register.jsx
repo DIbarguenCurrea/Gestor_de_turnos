@@ -1,11 +1,11 @@
-import CreateRegister from '../../components/Register/CreateRegister'
+import CreateRegister from "../../components/CreateUser/CreateRegister"
+
 
 
 function Register() {
   
   return (
     <div>
-        <h1>Formulario de Registro</h1>
       <CreateRegister/>
     </div>
   )

@@ -1,33 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .NavContainer {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    border: 1px solid #1e5172;
-    border-radius: 32px;
-    margin: 15px;
-    background-color: #8aafc7;
+    border-bottom: 5px inset #4CCD99;
 }
 
 h2 {
     font-weight: 650;
     padding: 40px;
     margin: 0;
+    color: white;
   }
+
+h2:hover {
+  color: white;
+  cursor: default;
+}
   
-a {
-    color: black;
+span {
+    color:white;
     text-decoration: none;
     margin-right: 1rem;
 }
 
-a:hover {
-    color: whitesmoke;
+span:hover {
     cursor: pointer;
+}
+
+a:link,
+:visited,
+:hover,
+:active{
+  text-decoration: none;
+  color: inherit;
+}
+
+.active span {
+ color: #FFC700;
+ background-color: none;
 }
   
 .links{
-    display: flex;
-    flex-direction: row;
+    display: flex;  
     align-items: flex-end;
     padding-bottom: 40px;
     gap: 4em;
@@ -36,7 +51,6 @@ a:hover {
 
 .avatar {
     display: flex;
-    flex-direction: row;
     img{
         width: 50px;
         height: 50px;

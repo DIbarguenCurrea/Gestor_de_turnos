@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.turn {
+color: black;
+display: flex;  
+background-color: white;
+border-radius: 7px; 
+box-shadow: 10px 10px 15px #113a36;
+padding: 1px;
+}
+
+.turn_titles {
+  display: flex;
+  justify-content: space-between;
+  margin: 1px;
+  padding: 0 50px 0;
+  background-color: white;
+  border-radius: 10px; 
+  box-shadow: 10px 10px 15px #113a36; 
+}
+
+.turn_date,
+.turn_time {
+  padding: 0 50px 0;
+  margin: 4px;
+  flex: 1 1 ;
+}
+
+.turn_status {
+  padding: 0 50px 0;
+  color: #009c27;
+}
+
+.active {
+  color: #009c27;
+}
+
+.cancelled {
+  color: red;
+}
+
+.turno_details {
+  background-color: #3f7acd;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.turno_details:hover {
+  background-color: #4CCD99
+}
+
+.titulo h1 {
+  width: 25%;
+  color: white;
+}
+
+span { 
+  color: black;
+}

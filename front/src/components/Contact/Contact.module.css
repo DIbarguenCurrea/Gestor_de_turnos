@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.contactContainer {
+    display: flex;
+  }
+
+  .columnForm {
+    flex: 1;
+    padding: 70px;
+  }
+
+  .column {
+    flex: 1;
+    padding: 1px;
+    margin-top: 0;
+  }
+  
+  .contactForm {
+    display: flex;
+    flex-direction: column; 
+  }
+  
+  .boxInfo {
+    margin-bottom: 15px;
+    
+    text-align: center;
+  }
+  
+  .form_label {
+    font-weight: bold;
+    font-size: 25px;
+  }
+  
+  .form_control {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    margin-bottom: 10px; 
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+  
+  textarea.form_control {
+    resize: none;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    background-color: #4CCD99;
+    color:black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  h5 {
+    font-size: 3.95rem;
+    color: #FFC700;
+  }
+
+  h5:hover {
+    font-size: 3.95rem;
+    color: #FFC700;
+  }
+
+  .column p {
+    display: block;
+    text-align: justify;
+    color: white;
+    width: 75vh;
+    margin-top: 1px;
+  }

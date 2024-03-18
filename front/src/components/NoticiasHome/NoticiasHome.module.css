@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .imgtextContainer {
     display: flex;
-    background-color: #8aafc7;
-    border: 1px solid #1e5172;
+    color: white;
+    background-color: none;
+    border: 5px outset #FFC700;
     border-radius: 32px;
     padding: 2em;
     align-items: center;
@@ -10,11 +13,15 @@
     margin: 15px;
     img{
         width: 200px;
-        padding:     20px;
+        padding: 20px;
     }
 }
 
 h1 { 
     font-size: 2.2em;
     margin: 15px;
+}
+
+.imgtextContainer:hover {
+    border: 5px outset;
 }

@@ -106,3 +106,6 @@ Email
 ## Diagrama DB Entidad-Relación
 ![DBDiagram](./assets/DB%20Diagram.png)
 
+<h6> 
+NOTA: Revisar el Readme.md de la carpeta Front para realizar las pruebas correspondientes. 
+</h6> 

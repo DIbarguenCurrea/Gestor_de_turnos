@@ -1,0 +1,45 @@
+.landing_container {
+    color: white;
+    padding: 50px;
+    text-align: center;
+    height: 83vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+
+.buttons_container {
+    margin-top: 20px;
+}
+
+.landing_container h1 {
+    font-size: 5em;
+    color: white;
+}
+
+.landing_container p {
+    font-size: 2em;
+  }
+
+.register_button,
+.login_button {
+    background-color: #4CCD99;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.register_button:hover,
+.login_button:hover {
+    background-color: #FFC700;
+}
+
+.footer {
+    align-items: flex-end;
+    font-size: 22px;
+}

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+span { 
+    color: black;
+}
+
+.turn {
+color: black;
+display: flex;  
+background-color: white;
+border-radius: 7px; 
+box-shadow: 10px 10px 15px #113a36;
+padding: 1px;
+}
+
+.turn_titles {
+  display: flex;
+  justify-content: space-between;
+  margin: 1px;
+  padding: 0 65px 0;
+  background-color: white;
+  border-radius: 10px; 
+  box-shadow: 10px 10px 15px #113a36; 
+}
+
+.turn_date,
+.turn_time,
+.turn_status {
+  padding: 0 35px 0;
+  margin: 4px;
+  flex: 1 1 ;
+}
+
+.turn_status {
+  color: #009c27;
+}
+
+.active {
+  margin: 10px;  
+  color: #009c27;
+}
+
+.cancelled {
+  margin: 10px;
+  color: red;
+}
+
+.buttonCancelled {
+    background-color: #4CCD99;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.buttonCancelled:hover {
+    background-color: #FFC700;
+}
+
+h6 {
+  color: black;
+  font-size: large;
+}
+
+.link_button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CCD99;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.link_button:hover {
+  background-color: #FFC700;
+  color: black;
+}

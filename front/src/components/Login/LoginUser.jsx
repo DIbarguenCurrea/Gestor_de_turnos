@@ -2,6 +2,9 @@ import { useState } from 'react'
 import Styles from './LoginUser.module.css'
 import validationUser from '../../helpers/validateUser';
 import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setUserData } from '../../redux/userSlice';
 
 function LoginUser() {
   const [input, setInput] = useState({
@@ -25,6 +28,10 @@ function LoginUser() {
       [name]: value,
     }))
   };
+  
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -33,42 +40,41 @@ function LoginUser() {
       alert ("Usuario y Contraseña incorrectos")
       return;
     }
-    try {
-      const response = await axios.post("http://localhost:3000/users/login", input)
-      console.log(response.data);
-      alert(
-        `Login successful`);
-        setInput({
-          username: "",
-          password: "",
-        });
-    } catch (error) {
-      console.log(error);
-      alert("Ocurrio un error al iniciar sesión");
-    }
-  };
+
+    axios
+      .post("http://localhost:3000/users/login", input)
+      .then (response => response.data)
+      .then (data => {
+        dispatch(setUserData(data));
+        alert("Login Sucesfull")  
+        navigate("/home");
+      })
+      .catch ((error) => 
+      alert (`Acceso denegado: ${error?.response?.data?.message}` )
+      );
+    };
 
   return (
     <div>
-      <h1>Iniciar Sesión</h1>
       <form onSubmit={handleSubmit} className={Styles.container}>
-        <label htmlFor="username">Username:</label> 
+      <h1>Iniciar Sesión</h1>
+        <label htmlFor="username"></label> 
         <input 
           type="text"
           name="username"
           id="username"
           value={input.username}
-          placeholder="Ingresa tu Usuario"
+          placeholder="Usuario"
           onChange={handleChange}
           className={Styles.input}
         />
-        <label htmlFor="password">Password:</label> 
+        <label htmlFor="password"></label> 
         <input 
           type="password"
           name="password"
           id="password"
           value={input.password}
-          placeholder="***********"
+          placeholder="Contraseña"
           onChange={handleChange}
           className={Styles.input}
         />
@@ -82,6 +88,14 @@ function LoginUser() {
         >
           Ingresar
         </button>
+        <div>
+        <p>¿Olvidó su contraseña?</p>
+        <p>¿No tienes cuenta?
+          <Link to="/register" className={Styles.link_register}>
+          <span> Regístrate </span>
+          </Link>
+        </p>
+      </div>
       </form>
     </div>
   )
