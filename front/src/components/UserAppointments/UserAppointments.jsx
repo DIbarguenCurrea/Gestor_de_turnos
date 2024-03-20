@@ -9,7 +9,8 @@ function UserAppointments ({
 }) {
 
   date = new Date(date);
-  const formatDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}` ;
+  const formatDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+
   const handleClick = () => {
     if (
       window.confirm(

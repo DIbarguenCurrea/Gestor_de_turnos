@@ -14,6 +14,7 @@ function CreateAppointment () {
     
     const [appointment, setAppointment] = useState(initialState);
     const userId = useSelector(state => state.actualUser?.userData?.user?.id); 
+    const login = useSelector(state => state.actualUser?.userData?.login);
     const navigate = useNavigate();
     const [errors, setErrors] = useState ();
 
@@ -95,7 +96,7 @@ function CreateAppointment () {
             })}
             <button 
             type="submit" 
-            disabled={Object.keys(appointment).some((e) => !appointment[e])}
+            disabled={Object.keys(appointment).some((e) => !appointment[e]) || !login }
             >
                 Reservar
             </button>

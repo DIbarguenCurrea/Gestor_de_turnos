@@ -12,7 +12,13 @@ function Appointments () {
   
     const actualUserId = useSelector(state => state.actualUser?.userData?.user?.id);
       // console.log(actualUserId)
-    const appointments = useSelector(state => state.actualUser.userAppointments)
+    const appointments = useSelector(state => state.actualUser.userAppointments);
+    const appointmentsSort = [...appointments].sort((a,b) => {
+      const dateA = new Date (a.date);
+      const dateB = new Date (b.date);
+      return dateA.getTime()-dateB.getTime()
+      
+    })
       // console.log(appointments);
     const dispatch = useDispatch();
 
@@ -52,7 +58,7 @@ function Appointments () {
       </div>
       { appointments.length 
         ?
-          appointments.map((appointment) => (
+          appointmentsSort.map((appointment) => (
             <UserAppointments
               key={appointment.id}
               id={appointment.id}
