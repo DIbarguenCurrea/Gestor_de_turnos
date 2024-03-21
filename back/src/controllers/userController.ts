@@ -50,5 +50,3 @@ export const login = async (req:Request , res: Response) => {
             res.status(400).json({ message: error.message});
         }
 };
-
-// DELETE de la base datos por Id de usuario o nombre. (toda la información y relaciones)
