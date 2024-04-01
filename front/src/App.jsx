@@ -15,10 +15,12 @@ import Reserve from './views/Reserve/Reserve'
 function App() { 
   const location = useLocation();
   const isLanding = location.pathname === "/";
+  const isRegister = location.pathname === "/register";
+  
 
   return (
     <>
-      {!isLanding && <NavBar/> }
+      {!isLanding && !isRegister && <NavBar/> }
         <Routes>
           <Route path="/" element={ <Landing/> } />
           <Route path="/home" element={ <Home/> } />

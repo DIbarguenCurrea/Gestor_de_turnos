@@ -97,7 +97,7 @@ Puedes registrar y cancelar los turnos que desees.
 
 **Extra** 
 
-Utiliza el siguiente path *http://localhost:5173/misturnos* para ver todos los turnos que haz creado y adicional a esto, si realizas más creaciones de usuario podrás ver el detalle del turno a quien esta asignado. 
+Utiliza el siguiente path *localhost:${PORT}/misturnos* para ver todos los turnos que haz creado y adicional a esto, si realizas más creaciones de usuario podrás ver el detalle del turno a quien esta asignado. 
 
 
 <h3>Créditos</h3>
